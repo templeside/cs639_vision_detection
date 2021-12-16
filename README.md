@@ -1,11 +1,43 @@
 # cs639_vision_detection
 
 ## Problem
-Our 
+One of the common goal in Computer Vision is to interpret images up to level that humans perceive.
+
+And many studies have done recognizing and understanding the object that mostly fill up the image,
+However, the relationship between two or more objects has more significant meaning of the overall image.
+
+For instance, even all the images above have both bicycle and a person, the interpretations for each images are different from each other due to its relationship between a person and a bicycle.
 
 ## Motivation Important?
+Identifying visual relationship is important because it’s hard to interpret context of the image due to the complex structure of human language
+
+And this problem hinder development of the computer vision of multi-modal AI in which multiple data sources such as image, text and speech are all combined to act like what humans do inside their brain
+
+
+With visual relationship detection model, images will also be more accurately retrieved since it provides important cues of identification 
+
+And this technology can be later used for 
+searching images in local computer, website, and GIf search bar 
+detecting accidents in factory immediately 
+and generating description of videos that doesn’t have an audio for those who are blind
+
+:-------------------------:|:-------------------------:
+![](human_pose_estimation.png)  |  ![](Secondary_Regions.png)
+
+Xxx such as visually similar image but modified in small ways.
 
 ## Current State Of Art
+
+Two examples that are used to predict visual relationship are human pose estimation and secondary region. 
+
+When both approaches want to refer to an image as a person riding a horse,
+
+Human Pose estimation will first detect a person, and extract features around human pose key points 
+but second approach will find overlapping region or union of the human and object
+
+While both approaches use hand-designed attention map that’s centered on individual cues of object or human, 
+
+we instead used end-to-end trainable attention-based methods called instance-centric-attention-network to detect more contextual information of the image.
 
 ## Our Approach 
 Our  instance centric attention network approaches to human-object interaction in three parts: detecting objects, construct prediction with human’s, object’s, spatial configuration perspective, and generating score confidence.
