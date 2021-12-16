@@ -34,7 +34,7 @@ and generating description of videos that doesn’t have an audio for those who 
 Xxx such as visually similar image but modified in small ways.
 
 ## Current State Of Art
-1. Human Pose Estimation      |  2. Secondary Regions
+Human Pose Estimation      |   Secondary Regions
 :----------------------------:|:-------------------------:
 ![](human_pose_estimation.png)|  ![](Secondary_Regions.png)
 
@@ -49,8 +49,6 @@ While both approaches use hand-designed attention map that’s centered on indiv
 
 we instead used end-to-end trainable attention-based methods called instance-centric-attention-network to detect more contextual information of the image.
 
-
-
 ## Our Approach 
 ![](algorithm.png)
 
@@ -58,9 +56,9 @@ Our  instance centric attention network approaches to human-object interaction i
 First, in order to detect human, R-CNN is used as selective search to localize people and object instances in the picture. Given the detected instances, our method aims to recognize interactions between all pairs of objects including human.
 After searching our object detection, the model with CNN calculates the prediction of spatial relationship between human and objects for the next step called score fusion.
 
->$S^{a}_{h,o}$ = $S_{h,o}$ * $S_{h,o}$ ($S^{a}_{h}$ + $S^{a}_{o}$) * $S^{a}_{sp}$
+$S^{a}_{h,o}$ = $S_{h,o}$ * $S_{h,o}$ ($S^{a}_{h}$ + $S^{a}_{o}$) * $S^{a}_{sp}$
 
-At the end of our approach,, computing the interaction confidence, we score the values by the above following equation. We compute the most closely related output with the score which depends on the confidence for the individual object detections. for each human-object interaction, we need to predict the Human object Interface score for each action A, where A denotes the total number of possible actions.
+At the end of our approach, computing the interaction confidence, we score the values by the above following equation. We compute the most closely related output with the score which depends on the confidence for the individual object detections. for each human-object interaction, we need to predict the Human object Interface score for each action A, where A denotes the total number of possible actions.
 Through our approach, we can get the result with highlighting the detected human and object interaction in colored boxes.
 On the left side,, our box shows our model can predict multiple situations in the given data, which means our model can detect different actions and objects in one human object.
 On the right side, our model can predict more than one human box.
@@ -70,20 +68,29 @@ With our project, the unexpected situations can be alerted and prevented.
 Eventually, we can get the support in human’s activity cared by the supportive devices. 
 
 For the terminology,
+
+$S^{a}_{h,o}$
 S a h o is the score for each action from the number of possible actions
+
+$S_{h,o}$ 
 S h or S o is the confidence for the individual object detections
+
+($S^{a}_{h}$ + $S^{a}_{o}$) 
 s a h + s a o is the interaction prediction based on the appearance of the person sah and the object sao
+
+ $S^{a}_{sp}$
 sasp is  the score prediction based on the spatial relationship between the person and the object.
 With calculation, the module detects the correlative scores in the human objective’s perspective.
 
-## 
+## Datasets
+![V-COCO-0000000338-09dd0958_gn4cUcQ.jpg](V-COCO-0000000338-09dd0958_gn4cUcQ.jpg)
 Verbs in COCO (V-COCO) is a dataset that builds off COCO for human-object interaction detection. V-COCO provides 10,346 images (2,533 for training, 2,867 for validating and 4,946 for testing) and 16,199 person instances. Each person has annotations for 29 action categories and there are no interaction labels including objects.
 
 
 
 
 ## Results
-1. Multiple Interaction      |  2. Multiple human object
+Multiple Interaction      |  Multiple human object
 :---------------------------:|:-------------------------:
 ![img1](person.png)          |  ![](bicycle.png)
 
@@ -103,7 +110,11 @@ With calculation, the module detects the correlative scores in the human objecti
 
 ## References
 <https://paperswithcode.com/dataset/v-coco>
+
+<https://www.researchgate.net/figure/Pose-estimation-and-action-recognition-results-on-the-V-COCO-Dataset-16-which-has_fig9_339477856>
+
 <https://arxiv.org/abs/1608.00187>
+
 <https://arxiv.org/abs/1808.10437>
 
 
