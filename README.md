@@ -96,8 +96,10 @@ Verbs in COCO (V-COCO) is a dataset that builds off COCO for human-object intera
 ## Results
 Multiple Interaction      |  Multiple human object
 :---------------------------:|:-------------------------:
-![img1](person.png)          |  ![](bicycle.png)
+![](person.png)          |  ![](bicycle.png)
 
+
+![](person.png)            ![](bicycle.png)
 For the terminology,
 S a h o is the score for each action from the number of possible actions
 S h or S o is the confidence for the individual object detections
