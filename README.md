@@ -30,12 +30,12 @@ With calculation, the module detects the correlative scores in the human objecti
 
 ## Results and comparison
 
-# Discussion 
+## Discussion 
 -what did you learn from this project?
 -where could this lead to in the future? 
 
 
 
 
-# Reference
+## Reference
 
