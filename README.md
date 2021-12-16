@@ -58,6 +58,8 @@ After searching our object detection, the model with CNN calculates the predicti
 
 $S^{a}_{h,o}$ = $S_{h,o}$ * $S_{h,o}$ ($S^{a}_{h}$ + $S^{a}_{o}$) * $S^{a}_{sp}$
 
+<img src="https://latex.codecogs.com/svg.image?\bg_black&space;S^{a}_{h,o}&space;=&space;S_{h,o}&space;*&space;S_{h,o}&space;*&space;(S^{a}_{h}&space;&plus;&space;S^{a}_{o})&space;*&space;S^{a}_{sp}" title="\bg_black S^{a}_{h,o} = S_{h,o} * S_{h,o} * (S^{a}_{h} + S^{a}_{o}) * S^{a}_{sp}" />
+
 At the end of our approach, computing the interaction confidence, we score the values by the above following equation. We compute the most closely related output with the score which depends on the confidence for the individual object detections. for each human-object interaction, we need to predict the Human object Interface score for each action A, where A denotes the total number of possible actions.
 Through our approach, we can get the result with highlighting the detected human and object interaction in colored boxes.
 On the left side,, our box shows our model can predict multiple situations in the given data, which means our model can detect different actions and objects in one human object.
@@ -69,7 +71,7 @@ Eventually, we can get the support in human’s activity cared by the supportive
 
 For the terminology,
 
-$S^{a}_{h,o}$
+<img src="https://latex.codecogs.com/svg.image?S^{a}_{h,o}" title="S^{a}_{h,o}" />
 S a h o is the score for each action from the number of possible actions
 
 $S_{h,o}$ 
@@ -79,6 +81,8 @@ S h or S o is the confidence for the individual object detections
 s a h + s a o is the interaction prediction based on the appearance of the person sah and the object sao
 
  $S^{a}_{sp}$
+
+ $e^{i \pi} 
 sasp is  the score prediction based on the spatial relationship between the person and the object.
 With calculation, the module detects the correlative scores in the human objective’s perspective.
 
