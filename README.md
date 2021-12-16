@@ -29,6 +29,13 @@ sasp is  the score prediction based on the spatial relationship between the pers
 With calculation, the module detects the correlative scores in the human objective’s perspective.
 
 ## Results and comparison
+![img1]('person.jpg')
+For the terminology,
+S a h o is the score for each action from the number of possible actions
+S h or S o is the confidence for the individual object detections
+s a h + s a o is the interaction prediction based on the appearance of the person sah and the object sao
+sasp is  the score prediction based on the spatial relationship between the person and the object.
+With calculation, the module detects the correlative scores in the human objective’s perspective.
 
 ## Discussion 
 -what did you learn from this project?
