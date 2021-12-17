@@ -145,9 +145,7 @@ Multiple Interaction         |  Multiple human object
 
 <br>
 
-Through our approach, we were able to highlight human and object interaction in colored boxes as shown on the above. On the left detection, our box shows our model predict multiple interactions in a person
-On the right detection, our model predict more than one human interaction.
-This allow us to gather relevant contextual information facilitating Human Object Interaction. In future work, we can get the automated support by detected human’s activity cared by the vision powered devices. With our project, the unexpected situations can be alerted and prevented.
+Through our approach, we were able to highlight human and object interaction in colored boxes as shown on the above. On the left detection, our box shows our model predict multiple interactions in a person. On the right detection, our model predict more than one human interaction. This allow us to gather relevant contextual information facilitating Human Object Interaction. In future work, we can get the automated support by detected human’s activity cared by the vision powered devices. With our project, the unexpected situations can be alerted and prevented.
 
 <br>
 
