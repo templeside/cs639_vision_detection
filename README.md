@@ -92,24 +92,25 @@ Regional Proposal Network            |     Fast R-CNN detector
 <br>
 
 The R-CNN is extracting the features based on a pre-trained convolutional neural network and classify the regional proposal to either the background or one of the object classes. With the R-CNN, we can detect the object fast. The RPN implements the terminology of neural network with attention to tell the object detection (Fast R-CNN) where to look.
-The Regional Proposal Network(RPN) module is responsible for generating region proposals to detect. It applies the concept of attention in neural networks, so it guides the Fast R-CNN detection module to where to look for objects in the image.
+The Regional Proposal Network(RPN) module is responsible for generating region proposals to detect. It applies the concept of attention in neural networks and it guides the Fast R-CNN detection module to where to look for objects in the image.
 Fast R-CNN detector filters out the pre-computed image features to filter out the object candidates.
 Both modules Regional Proposal Network and Fast R-CNN detector find the featured region first and drop the less probability scores on the region.
 
-### 2. Prediction Models
+### 2. Prediction
 
-Using instances from object detection, we generated the Human Object Interaction hypothesis to compute action prediction scores
-For human/object stream to detect human/object cues, we extracted the instance-level appearance feature for a person/object and contextual features based on the attentional map. And then we concatenated and pass it through two connected layers to produce the action scores
-For pairwise stream, we took the union of two boxes and construct a binary image with two channels. And then, we extracted spatial features from this two-channel binary image by using CNN. Finally, to differentiate similar action prediction such as riding and walking a bicycle, we concatenated the spatial feature with human appearance feature. 
+Using instances from object detection, we generated the human object interaction hypothesis to compute action prediction scores. 
 
+For human/object stream to detect its cues, we extracted the instance-level appearance feature for a person/object and contextual features based on the attentional map. And then we concatenated and pass it through two connected layers to produce the action scores. 
+
+For pairwise stream, we took the union of two boxes and construct a binary image with two channels. And then, we extracted spatial features from this two-channel binary image by using CNN. Finally, to differentiate similar action prediction such as riding and walking a bicycle, we concatenated the spatial feature with human appearance feature.
 <br>
 
 ### 3. Score Confidence
 
 The Score Confidence is the calculation based on the correlation with the streams:
-1. Score based on human/object appearance and contextual features. (iCAN module)
-2. Score based on the spatial relationship of human-object. (Spatial Configuration)
-3. The final prediction is calculated by combining the interaction prediction calculated from each stream.
+1. Score based on human/object appearance and contextual features (iCAN module)
+2. Score based on the spatial relationship of human-object (Spatial Configuration)
+3. The final prediction is calculated by combining the interaction prediction calculated from each stream
 
 This inference can be implemented as an expression as follows:
 
@@ -132,17 +133,16 @@ With calculation, the module detects the correlative scores in the human objecti
 
 <br>
 
-## Result and Discussion
+## Conclusion
 
 <br>
 
-Multiple Interaction         |  Multiple human object
 :---------------------------:|:-------------------------:
 ![](person.png)              |  ![](bicycle.png)
 
 <br>
 
-Through our approach, we were able to highlight human and object interaction in colored boxes as shown on the above. On the left detection, our box shows our model predict multiple interactions in a person. On the right detection, our model predict more than one human interaction. This allow us to gather relevant contextual information facilitating Human Object Interaction. In future work, we can get the automated support by detected human’s activity cared by the vision powered devices. With our project, the unexpected situations can be alerted and prevented.
+As a result, we were able to highlight human and object interaction in colored boxes as shown above. As shown on the left image, box shows our model predicts multiple interactions with one person. On the right detection, our model predict more than one human interaction. This allow us to gather relevant contextual information facilitating human object interaction.
 
 <br>
 
@@ -162,4 +162,3 @@ Chen Gao and Yuliang Zou and Jia-Bin Huang. iCAN: Instance-Centric Attention Net
 Yash Goyal, Tejas Khot, Douglas Summers-Stay, Dhruv Batra, and Devi Parikh. Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering. Computer Vision and Pattern Recognition, 2017.
 
 Ahmed Fawzy Gad. Faster R-CNN Explained for Object Detection Tasks. PaperspaceBlog, 2021
-
