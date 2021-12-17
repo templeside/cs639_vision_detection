@@ -41,7 +41,7 @@ detecting accidents in factory immediately. And generating description of videos
 <br>
 
 ## Current State Of Art
-Human Pose Estimation      |   Secondary Regions
+Human Pose Estimation         |   Secondary Regions
 :----------------------------:|:-------------------------:
 ![](human_pose_estimation.png)|  ![](Secondary_Regions.png)
 
@@ -78,7 +78,7 @@ In this project, we used Faster R-CNN to detect object detection.
 Faster R-CNN model is composed of two modules:
 Deep fully convolutional network and Fast R-CNN detector 
 
-Regional Proposal Network     |     Fast R-CNN detector 
+Regional Proposal Network            |     Fast R-CNN detector 
 :-----------------------------------:|:-------------------------:
 ![](r-cnn1.PNG)                      |  ![](r-cnn2.PNG)
 
@@ -118,9 +118,9 @@ With calculation, the module detects the correlative scores in the human objecti
 <br>
 
 ## Result and Discussion
-Multiple Interaction      |  Multiple human object
+Multiple Interaction         |  Multiple human object
 :---------------------------:|:-------------------------:
-![](person.png)          |  ![](bicycle.png)
+![](person.png)              |  ![](bicycle.png)
 
 <br>
 
