@@ -80,7 +80,7 @@ Deep fully convolutional network and Fast R-CNN detector
 
 Regional Proposal Network     |     Fast R-CNN detector 
 :-----------------------------------:|:-------------------------:
-![](r-cnn1.png)                      |  ![](r-cnn2.png)
+![](r-cnn1.PNG)                      |  ![](r-cnn2.PNG)
 
 The R-CNN is extracting the features based on a pre-trained convolutional neural network and classify the regional proposal to either the background or one of the object classes. With the R-CNN, we can detect the object fast. The RPN implements the terminology of neural network with attention to tell the object detection (Fast R-CNN) where to look.
 The RPN module is responsible for generating region proposals to detect. It applies the concept of attention in neural networks, so it guides the Fast R-CNN detection module to where to look for objects in the image.
