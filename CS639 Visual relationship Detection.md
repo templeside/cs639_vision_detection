@@ -86,9 +86,9 @@ Deep fully convolutional network and Fast R-CNN detector
 
 <br>
 
-Regional Proposal Network            |     Fast R-CNN detector 
-:-----------------------------------:|:-------------------------:
-![](r-cnn1.PNG)                      |  ![](r-cnn2.PNG)
+|![](r-cnn1.PNG)                      |  ![](r-cnn2.PNG)|
+|:-----------------------------------:|:-------------------------:|
+|Regional Proposal Network            |     Fast R-CNN detector |
 
 <br>
 
