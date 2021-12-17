@@ -65,17 +65,14 @@ V-COCO is consist of:
 
 ## Our Approach
 
-Our  instance centric attention network approaches to human-object interaction in three parts: 
-   
+In our approach, our pipeline can be splitted in three parts: 
+1. Object Detection
+2. Prediction: human centric, object, spatial configuration 
+3. Score Confidence.
+
 <br>
 
 ![](algorithm.png)
-
-<br>
-   
-   1. Object Detection
-   2. Prediction: human centric, object, spatial configuration 
-   3. Score Confidence.
 
 <br>
 
