@@ -39,9 +39,11 @@ With visual relationship detection model, images will also be more accurately re
 
 <br> 
 
-Human Pose Estimation         |   Secondary Regions
-:----------------------------:|:-------------------------:
-![](human_pose_estimation.png)|  ![](Secondary_Regions.png)
+|![](human_pose_estimation.png)|  ![](Secondary_Regions.png)|
+|:----------------------------:|:-------------------------:|
+|Human Pose Estimation         |   Secondary Regions|
+
+
 
 <br>
 
