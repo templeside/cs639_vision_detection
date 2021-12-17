@@ -135,7 +135,7 @@ With calculation, the module detects the correlative scores in the human objecti
 ## Conclusion
 
 <br>
-  | 
+                -|- 
 :---------------------------:|:-------------------------:
 ![](person.png)              |  ![](bicycle.png)
 
