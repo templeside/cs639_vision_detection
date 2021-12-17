@@ -1,6 +1,6 @@
 # cs639_vision_detection
 ###### Chaiyeen Oh, Chanwoong Jhon
-[View Presentation](presentation.pptx)
+
 ---
 ## Introduction
 
@@ -151,14 +151,20 @@ This allow us to gather relevant contextual information facilitating Human Objec
 
 <br>
 
+## Material
+
+[View Presentation](presentation.pptx)
+
+Visual Relationship Detection with Language Priors
+
 ## References
-<https://paperswithcode.com/dataset/v-coco>
+V-COCO Dataset
 
-<https://www.researchgate.net/figure/Pose-estimation-and-action-recognition-results-on-the-V-COCO-Dataset-16-which-has_fig9_339477856>
+Cewu Lu, Ranjay Krishna, Michael Bernstein, and Li Fei-Fei. Visual relationship detection with language priors. In ECCV, 2016.
 
-<https://arxiv.org/abs/1608.00187>
+Chen Gao and Yuliang Zou and Jia-Bin Huang. iCAN: Instance-Centric Attention Network for Human-Object Interaction Detection. In BMVC, 2018
 
-<https://arxiv.org/abs/1808.10437>
+Yash Goyal, Tejas Khot, Douglas Summers-Stay, Dhruv Batra, and Devi Parikh. Making the V in VQA Matter: Elevating the Role of Image Understanding in Visual Question Answering. Computer Vision and Pattern Recognition, 2017.
 
-<https://blog.paperspace.com/faster-r-cnn-explained-object-detection/>
+Ahmed Fawzy Gad. Faster R-CNN Explained for Object Detection Tasks. PaperspaceBlog, 2021
 
