@@ -8,7 +8,6 @@ Artificial Intelligence is a fast growing field that gives impact on everyday li
 <br>
 
 ## Problem
-<br>
 
 In the perspective of machines, technologies should keep humans at the center of the systems. However, there are some limitations of machines visually recognizing descriptive phrases of human languages. For instance, if I were ordering a house robot to ‘grab a key on the table’, the robot would detect many keys correctly but don’t know which key I am specifically talking about.
 
@@ -20,6 +19,7 @@ In the perspective of machines, technologies should keep humans at the center of
 
 Most of the Computer Vision studies focus on developed object detection algorithms of objects that mostly fill up the image, However, the relationship between two or more objects has more significant meaning of the overall image. For instance, even though all the images above have both a bicycle and a person, the interpretations for each image are different from each other due to its relationship between a person and a bicycle.
 Rather than using object detection in a single label, our team wanted to try to detect relationships between objects and generate how humans would describe the same image in subject, predicate, object format such as “person riding horse”. 
+
 <br>
 
 ## Motivation
@@ -30,26 +30,29 @@ Rather than using object detection in a single label, our team wanted to try to 
 
 <br>
 
-
-
 Identifying visual relationship is important because it’s hard to interpret context of the image due to the complex structure of human language. And this problem hinder development of the computer vision of multi-modal AI in which multiple data sources such as image, text and speech are all combined to act like what humans do inside their brain.
 
-With visual relationship detection model, images will also be more accurately retrieved since it provides important cues of identification. And this technology can be later used for 
-searching images in local computer, website, and GIf search bar 
+With visual relationship detection model, images will also be more accurately retrieved since it provides important cues of identification. And this technology can be later used for searching images in local computer, website, and GIf search bar 
 detecting accidents in factory immediately. And generating description of videos that doesn’t have an audio for those who are blind
 
 <br>
 
 ## Current State Of Art
+
+<br> 
+
 Human Pose Estimation         |   Secondary Regions
 :----------------------------:|:-------------------------:
 ![](human_pose_estimation.png)|  ![](Secondary_Regions.png)
+
+<br>
 
 Two examples that are used to predict visual relationship are human pose estimation and secondary region. When both approaches want to refer to an image as a person riding a horse, the estimation will first detect a person. And extract features around human pose key points but second approach will find overlapping region or union of the human and object. While both approaches use hand-designed attention map that’s centered on individual cues of object or human. We instead used end-to-end trainable attention-based methods called instance-centric-attention-network(ICAN) to detect more contextual information of the image.
 
 <br>
 
 ## Dataset
+
 In this project, we used V-COCO as a dataset for this project. Verbs in COCO (V-COCO) is a dataset that builds off COCO for human-object interaction detection. Because we need to detect object with predicate or action verb, it was a perfect match for training the model.
 
 V-COCO is consist of:
@@ -62,6 +65,7 @@ V-COCO is consist of:
 <br>
 
 ## Our Approach
+
 Our  instance centric attention network approaches to human-object interaction in three parts: 
    1. Object Detection
    2. Prediction: human centric, object, spatial configuration 
@@ -71,28 +75,37 @@ Our  instance centric attention network approaches to human-object interaction i
 
 ### 1. Object Detection
 
-<br>
-
 In this project, we used Faster R-CNN to detect object detection. 
 
 Faster R-CNN model is composed of two modules:
 Deep fully convolutional network and Fast R-CNN detector 
 
+<br>
+
 Regional Proposal Network            |     Fast R-CNN detector 
 :-----------------------------------:|:-------------------------:
 ![](r-cnn1.PNG)                      |  ![](r-cnn2.PNG)
+
+<br>
 
 The R-CNN is extracting the features based on a pre-trained convolutional neural network and classify the regional proposal to either the background or one of the object classes. With the R-CNN, we can detect the object fast. The RPN implements the terminology of neural network with attention to tell the object detection (Fast R-CNN) where to look.
 The RPN module is responsible for generating region proposals to detect. It applies the concept of attention in neural networks, so it guides the Fast R-CNN detection module to where to look for objects in the image.
 Fast R-CNN detector filters out the pre-computed image features to filter out the object candidates.
 Both modules Regional Proposal Network and Fast R-CNN detector find the featured region first and drop the less probability scores on the region.
+
 ### 2. Prediction Models
 
+<br>
+
 ![](algorithm.png)
+
+<br>
 
 Using instances from object detection, we generated the Human Object Interaction hypothesis to compute action prediction scores
 For human/object stream to detect human/object cues, we extracted the instance-level appearance feature for a person/object and contextual features based on the attentional map. And then we concatenated and pass it through two connected layers to produce the action scores
 For pairwise stream, we took the union of two boxes and construct a binary image with two channels. And then, we extracted spatial features from this two-channel binary image by using CNN. Finally, to differentiate similar action prediction such as riding and walking a bicycle, we concatenated the spatial feature with human appearance feature. 
+
+<br>
 
 ### 3. Score Confidence
 
@@ -102,7 +115,12 @@ The Score Confidence is the calculation based on the correlation with the stream
 3. The final prediction is calculated by combining the interaction prediction calculated from each stream.
 
 This inference can be implemented as an expression as follows:
+
+<br>
+
 ![](equation.png)
+
+<br>
 
 On the expression:
 
@@ -118,6 +136,9 @@ With calculation, the module detects the correlative scores in the human objecti
 <br>
 
 ## Result and Discussion
+
+<br>
+
 Multiple Interaction         |  Multiple human object
 :---------------------------:|:-------------------------:
 ![](person.png)              |  ![](bicycle.png)
@@ -128,6 +149,7 @@ Through our approach, we were able to highlight human and object interaction in 
 On the right detection, our model predict more than one human interaction.
 This allow us to gather relevant contextual information facilitating Human Object Interaction. In future work, we can get the automated support by detected human’s activity cared by the vision powered devices. With our project, the unexpected situations can be alerted and prevented.
 
+<br>
 
 ## References
 <https://paperswithcode.com/dataset/v-coco>
