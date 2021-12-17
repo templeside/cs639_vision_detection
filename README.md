@@ -155,7 +155,7 @@ This allow us to gather relevant contextual information facilitating Human Objec
 
 [View Presentation](presentation.pptx)
 
-Visual Relationship Detection with Language Priors
+<br>
 
 ## References
 V-COCO Dataset
