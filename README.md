@@ -139,8 +139,8 @@ With calculation, the module detects the correlative scores in the human objecti
 
 <br>
                       
-|![](person.png)              |  ![](bicycle.png)|
-|:---------------------------:|:----------------:|
+|![](person.png)     |  ![](bicycle.png)|
+|--------------------|------------------|
 
 
 As a result, we were able to highlight human and object interaction in colored boxes as shown above. As shown on the left image, box shows our model predicts multiple interactions with one person. On the right detection, our model predict more than one human interaction. This allow us to gather relevant contextual information facilitating human object interaction.
